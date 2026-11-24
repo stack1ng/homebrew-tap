@@ -1,25 +1,25 @@
 class SimpleHttptap < Formula
   desc "An ephemeral HTTPS-intercepting proxy that writes every request and response, byte-exact, to stdout as NDJSON."
   homepage "https://github.com/stack1ng/simple-httptap"
-  version "0.0.1"
+  version "0.0.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.1/simple-httptap-proxy-tokio-aarch64-apple-darwin.tar.xz"
-      sha256 "3b3c393e7415aec55d3001c452a9653742a8d5d060f9b6039a732b8ce94c7a44"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.2/simple-httptap-proxy-tokio-aarch64-apple-darwin.tar.xz"
+      sha256 "d46d4887cfa14ac3a14cf980d0ccfa13912be6cafa6314a8a4f0a9ba2c3b5b5d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.1/simple-httptap-proxy-tokio-x86_64-apple-darwin.tar.xz"
-      sha256 "a646cb5956305f634fb0f53b2446085beebfc2e4011ad1ece03364f72bcaa0ee"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.2/simple-httptap-proxy-tokio-x86_64-apple-darwin.tar.xz"
+      sha256 "bb207fbc7baf0b7c6eff098e9f01e6ba90f2d0703fd40e17205241a1c2b74a84"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.1/simple-httptap-proxy-tokio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "172e92af685c5310fd4c728d7ce3c7e37dd8fdf8ef1a139d391c514fc081cefb"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.2/simple-httptap-proxy-tokio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7431f92dd5aabf325efe53b2d55f4e9bfe5b67a573e56662205880b9de1ae0b6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.1/simple-httptap-proxy-tokio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d705d374a24575219650f9aeea904c7cca1828ffa020ce4d8353e9e69f8c7de5"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.2/simple-httptap-proxy-tokio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "87fde931af2a5f926ed157f6badf1a47bcb74aae4b9b3ed23aa7633cf651194b"
     end
   end
   license "MIT"
@@ -49,16 +49,16 @@ class SimpleHttptap < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "simple-httptap"
+      bin.install "httptap"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "simple-httptap"
+      bin.install "httptap"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "simple-httptap"
+      bin.install "httptap"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "simple-httptap"
+      bin.install "httptap"
     end
 
     install_binary_aliases!

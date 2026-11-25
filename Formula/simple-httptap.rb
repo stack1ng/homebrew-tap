@@ -1,25 +1,25 @@
 class SimpleHttptap < Formula
-  desc "An ephemeral HTTPS-intercepting proxy that writes every request and response, byte-exact, to stdout as NDJSON."
+  desc "Runs a program with its traffic sent through a SOCKS5 proxy that decrypts TLS and QUIC with a key log and writes every request and response, byte-exact, to stdout as NDJSON."
   homepage "https://github.com/stack1ng/simple-httptap"
-  version "0.0.3"
+  version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.3/simple-httptap-proxy-tokio-aarch64-apple-darwin.tar.xz"
-      sha256 "6a20a764cd0815ca9a618b5b5e235d79682f3a2dd92aeb8defbf9674d89b95c0"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.1.0/simple-httptap-proxy-tokio-aarch64-apple-darwin.tar.xz"
+      sha256 "0edecde84e01e5a60d13e2b02adcd706447681fa1db6ef0fd9ef922cbcf98059"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.3/simple-httptap-proxy-tokio-x86_64-apple-darwin.tar.xz"
-      sha256 "b198eea8aa84d696420a51b2d89f3fe2e0bff6ebc477e2da312ec75173041594"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.1.0/simple-httptap-proxy-tokio-x86_64-apple-darwin.tar.xz"
+      sha256 "d0532aa6f42d539a6b05bd2fd4e97a417c13818f1f28240c9758b64a2da8e573"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.3/simple-httptap-proxy-tokio-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4f9be71cd14efcd4fcff4fef150cfb61d24abdea51880c51c27e1150db52823c"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.1.0/simple-httptap-proxy-tokio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "60a7d31da31ea2145ed915e79117b4d8f7bf1fb624b84333ef22ad18613a04e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.0.3/simple-httptap-proxy-tokio-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "975bb26b3a64ff581680eb90b8fd93c5f37121e15374e0d00737ac88bddb7e1f"
+      url "https://github.com/stack1ng/simple-httptap/releases/download/v0.1.0/simple-httptap-proxy-tokio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9d9c717f94bc685ccc04c6991969735edeb7fc3630896f169ec1b5b63facc662"
     end
   end
   license "MIT"
